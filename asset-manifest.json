@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/SberApp-Guess-Animal/static/css/main.44882b5a.chunk.css",
-    "main.js": "/SberApp-Guess-Animal/static/js/main.1fa01cbf.chunk.js",
-    "main.js.map": "/SberApp-Guess-Animal/static/js/main.1fa01cbf.chunk.js.map",
+    "main.js": "/SberApp-Guess-Animal/static/js/main.77f57f88.chunk.js",
+    "main.js.map": "/SberApp-Guess-Animal/static/js/main.77f57f88.chunk.js.map",
     "runtime-main.js": "/SberApp-Guess-Animal/static/js/runtime-main.e5f7839e.js",
     "runtime-main.js.map": "/SberApp-Guess-Animal/static/js/runtime-main.e5f7839e.js.map",
-    "static/js/2.12af15dd.chunk.js": "/SberApp-Guess-Animal/static/js/2.12af15dd.chunk.js",
-    "static/js/2.12af15dd.chunk.js.map": "/SberApp-Guess-Animal/static/js/2.12af15dd.chunk.js.map",
+    "static/js/2.ed9f6820.chunk.js": "/SberApp-Guess-Animal/static/js/2.ed9f6820.chunk.js",
+    "static/js/2.ed9f6820.chunk.js.map": "/SberApp-Guess-Animal/static/js/2.ed9f6820.chunk.js.map",
     "static/js/3.35e0f749.chunk.js": "/SberApp-Guess-Animal/static/js/3.35e0f749.chunk.js",
     "static/js/3.35e0f749.chunk.js.map": "/SberApp-Guess-Animal/static/js/3.35e0f749.chunk.js.map",
     "static/js/4.53ce8501.chunk.js": "/SberApp-Guess-Animal/static/js/4.53ce8501.chunk.js",
     "static/js/4.53ce8501.chunk.js.map": "/SberApp-Guess-Animal/static/js/4.53ce8501.chunk.js.map",
     "index.html": "/SberApp-Guess-Animal/index.html",
     "static/css/main.44882b5a.chunk.css.map": "/SberApp-Guess-Animal/static/css/main.44882b5a.chunk.css.map",
-    "static/js/2.12af15dd.chunk.js.LICENSE.txt": "/SberApp-Guess-Animal/static/js/2.12af15dd.chunk.js.LICENSE.txt",
+    "static/js/2.ed9f6820.chunk.js.LICENSE.txt": "/SberApp-Guess-Animal/static/js/2.ed9f6820.chunk.js.LICENSE.txt",
     "static/js/3.35e0f749.chunk.js.LICENSE.txt": "/SberApp-Guess-Animal/static/js/3.35e0f749.chunk.js.LICENSE.txt",
     "static/media/hear.32c7908f.jpg": "/SberApp-Guess-Animal/static/media/hear.32c7908f.jpg",
     "static/media/lionpic.e6022f19.jpg": "/SberApp-Guess-Animal/static/media/lionpic.e6022f19.jpg",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e5f7839e.js",
-    "static/js/2.12af15dd.chunk.js",
+    "static/js/2.ed9f6820.chunk.js",
     "static/css/main.44882b5a.chunk.css",
-    "static/js/main.1fa01cbf.chunk.js"
+    "static/js/main.77f57f88.chunk.js"
   ]
 }
