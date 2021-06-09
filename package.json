@@ -2,7 +2,7 @@
   "name": "sber",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://artemiskot.github.io/название_репозитория",
+  "homepage": "http://artemiskot.github.io/SberApp-Guess-Animal",
   "dependencies": {
     "@sberdevices/assistant-client": "^2.14.2",
     "@sberdevices/plasma-icons": "^1.8.0",
