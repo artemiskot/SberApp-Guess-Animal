@@ -58,7 +58,7 @@ const Game = ({
     }
   }, [isPlaying]);
   useEffect(() => {
-    if (amountOfSolvedQuestions.current > 5) {
+    if (amountOfSolvedQuestions.current > 10) {
       {
         assistant.current?.sendData({
           action: { action_id: "gamefinish", payload: {} },
@@ -212,7 +212,7 @@ const Game = ({
 
   return (
     <Container style={{ marginBottom: "10rem" }}>
-      {amountOfSolvedQuestions.current > 5 ? (
+      {amountOfSolvedQuestions.current > 10 ? (
         <div>
           <Container>
             {playOrPractice == 0 ? (
