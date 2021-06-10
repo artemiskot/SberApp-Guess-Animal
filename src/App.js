@@ -15,7 +15,7 @@ const initializeAssistant = (getState /*: any*/) => {
   if (process.env.NODE_ENV === "development") {
     return createSmartappDebugger({
       token:
-        "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhNzgyOGE0NmZmZmI5ZWRiNDQ3MzVmMmMzMzRlMDg0ZjRkMGFhMGE5YzMwZjIyZjk5Y2Q5YWJmZTIxY2QyYmYzNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTYyMzM0NTgzMCwiaWF0IjoxNjIzMjU5NDIwLCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiYTgxNWExMzktZTBkMS00ODhhLWFmMDAtYTY0ODdhNDdiN2IyIiwic2lkIjoiNGJjMmE4MjAtN2JkNC00YmZhLWFiNDktYjMzZjYxMTNkYjRmIn0.N1u8ZBpm0-j1Gww3xAx5EGWvLk_gTeA0dY0gO5C4bBiMhlJ3wlfUIStPCLM-kvqS9N06_lJNLNF57DpFQFwbZ-3XSb_d82FSQ5wTZGDzWTLImQv4du5ZXxXpnnN2Z9waMcLQyhbA4ZJlktOQsiM8HAjlGjt04MKmn9eReNuqZDKUTY7jg9MOaiqjmXwECH9efpaamNyQGZrBiUKjJTupCAsnmpkKP22or3YbtuaPZ-HCLTnj9qNX0Y7R-ZKZ_KWWHgcNtMkiVQCI_O0Tri3_wA8xTkg-QmZ8s-w43Wb0hzZpEe6t81Z5oMoOl9AoY5QScxEZr67Gry6YJ344gHViPupPjOZ1fzlbEAotUT1r_f_ofyQ5FeA61cMNOmNG4We3w4xkcywAF8-YYnMIjCON4ENiITnRDfOs8OK9bweU-ADrOtP-Tt4_CL1q8P3QN-6eVNwguFNlIJutk3x0eSXYPFXrfouo3d8pYiE3-JCAGAXbO9_9AWgPSRm5wcfoTASdgqx9ajZ8SYpT8T42gCXu0oTqXl-WS06o3wAo1X0LVOERrDKNPp8z7BR5vkrGl-5W6JI7SQoukWRKnNdFWpXBzyJe1taSkvsLHT5KeRHUUv9ITKRDuOFkvwG1mZmFdcoegFL3jUKRyNeUTXxNCQw3TxVXG0rm7BPGrfwp1dg8gkQ" ??
+      process.env.REACT_APP_TOKEN ??
         "",
       initPhrase: `Запусти Отгадай животное`,
       getState,
