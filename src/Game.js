@@ -114,7 +114,10 @@ const Game = ({
         return (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Card
-              style={{ width: "40rem", marginTop: "4rem" }}
+              style={{
+                width: isRowBased ? "30rem" : "20rem",
+                marginTop: "1rem",
+              }}
               tabIndex={-1}
               outlined={false}
               scaleOnFocus={false}
@@ -159,7 +162,10 @@ const Game = ({
         return (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Card
-              style={{ width: "30rem", marginTop: "4rem" }}
+              style={{
+                width: isRowBased ? "30rem" : "20rem",
+                marginTop: "1rem",
+              }}
               tabIndex={-1}
               outlined={false}
               scaleOnFocus={false}
