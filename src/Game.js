@@ -2,7 +2,6 @@ import { Container } from "@sberdevices/plasma-ui/components/Grid";
 import { Timer } from "./Timer";
 import { useState, useEffect } from "react";
 import { Row, Col } from "@sberdevices/plasma-ui";
-import useSound from "use-sound";
 import { useHistory } from "react-router-dom";
 import { useMediaQuery } from "./media";
 
@@ -37,26 +36,21 @@ const Game = ({
   sumTime,
   ans,
   setAns,
-  sound,
   setCounter,
   counter,
+  isListening,
+  isPlaying,
+  playButtonText,
+  setPlayButtonText
 }) => {
   const status = ["success", "error", ""];
   const history = useHistory();
-
-  const [play, { stop, isPlaying }] = useSound(sound, { volume: 0.75 });
-  const [playButtonText, setPlayButtonText] = useState("Прослушать");
   useEffect(() => {
     generateNewAnimal();
   }, []);
   useEffect(() => {
     answer.current = ans;
   }, [ans]);
-  useEffect(() => {
-    if (!isPlaying) {
-      setPlayButtonText("Прослушать");
-    }
-  }, [isPlaying]);
   useEffect(() => {
     if (amountOfSolvedQuestions.current > 10) {
       {
@@ -175,12 +169,7 @@ const Game = ({
                   <Button
                     style={{ marginTop: "1rem" }}
                     onClick={() => {
-                      if (isPlaying) {
-                        stop();
-                      } else {
-                        play();
-                        setPlayButtonText("Остановить");
-                      }
+                       isListening();
                     }}
                     text={playButtonText}
                     view={"primary"}

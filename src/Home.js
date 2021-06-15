@@ -24,7 +24,7 @@ import {
   TextBox,
 } from "@sberdevices/plasma-ui";
 const Home = ({
-  setMode,
+  mode,
   setPlayOrPractice,
   playOrPractice,
   setCounter,
@@ -123,8 +123,8 @@ const Home = ({
                 style={{ marginTop: "1em" }}
                 tabIndex={-1}
                 onClick={() => {
+                  mode.current = 0; 
                   linkToGame();
-                  setMode(0);
                 }}
               />
             </CardContent>
@@ -153,8 +153,8 @@ const Home = ({
                 style={{ marginTop: "1em" }}
                 tabIndex={-1}
                 onClick={() => {
+                  mode.current = 1;
                   linkToGame();
-                  setMode(1);
                 }}
               />
             </CardContent>
@@ -182,8 +182,8 @@ const Home = ({
                 style={{ marginTop: "1em" }}
                 tabIndex={-1}
                 onClick={() => {
+                  mode.current = 2;
                   linkToGame();
-                  setMode(2);
                 }}
               />
             </CardContent>

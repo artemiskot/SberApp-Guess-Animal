@@ -5,6 +5,7 @@ import { useHistory, withRouter } from "react-router-dom";
 import { getRandomAnimal } from "./APIHelper.js";
 import { Toast } from "@sberdevices/plasma-ui";
 import { useToast, Button } from "@sberdevices/plasma-ui";
+import useSound from "use-sound";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
@@ -25,20 +26,26 @@ const initializeAssistant = (getState /*: any*/) => {
 };
 function App() {
   const [counter, setCounter] = useState(40);
-
+  const [sound, setSound] = useState("");
+  const [play, { stop, isPlaying }] = useSound(sound, { volume: 0.75 });
+  const [playButtonText, setPlayButtonText] = useState("Прослушать");
   const history = useHistory();
   const solvedQuestions = useRef("");
   const amountOfSolvedQuestions = useRef(0);
   const [name, setName] = useState("");
   const [picture, setPicture] = useState("");
   const [text, setText] = useState("");
-  const [sound, setSound] = useState("");
   const [ans, setAns] = useState("");
   const { showToast, hideToast } = useToast();
   const [sumTime, setSumTime] = useState(0);
   useEffect(() => {
     setSumTime(sumTime + 1);
   }, [counter]);
+  useEffect(() => {
+    if (!isPlaying) {
+      setPlayButtonText("Прослушать");
+    }
+  }, [isPlaying]); 
   const refAnswer = useRef("");
   const refName = useRef();
   const processCard = async () => {
@@ -46,7 +53,6 @@ function App() {
     console.log("Ответ правильный", name);
 
     if (refAnswer.current === refName.current) {
-      //alert("Верно");
       await generateNewAnimal();
       showToast(`Верно!`, "top", 1000);
       setCounter(40);
@@ -57,7 +63,6 @@ function App() {
       } else {
         showToast("Ошибка!", "top", 1000);
       }
-      //alert("Не верно");
     }
     setAns("");
   };
@@ -65,11 +70,9 @@ function App() {
     console.log(solvedQuestions.current);
     getRandomAnimal(solvedQuestions.current).then((x) => {
       if (solvedQuestions.current == "") {
-        //setSolvedQuestions(solvedQuestions + `${x.id}`);
         solvedQuestions.current += `${x.id}`;
         console.log(solvedQuestions.current);
       } else {
-        //setSolvedQuestions(solvedQuestions + "," + `${x.id}`);
         solvedQuestions.current += "," + `${x.id}`;
       }
       amountOfSolvedQuestions.current++;
@@ -82,26 +85,31 @@ function App() {
     });
   };
   const linkToGame = () => {
+    console.log(mode.current);
+    if(mode.current == 2){
+      assistant.current?.sendData({ action: { action_id: "playSound", payload: {} } });
+    } else{ 
+      assistant.current?.sendData({ action: { action_id: "game", payload: {} } });
+    }
+
     amountOfSolvedQuestions.current = 0;
     solvedQuestions.current = "";
     setCounter(40);
     setSumTime(0);
-    assistant.current?.sendData({ action: { action_id: "game", payload: {} } });
 
     history.push("/game");
   };
-  const [mode, setMode] = useState(0);
+  const mode = useRef(0);
   const [playOrPractice, setPlayOrPractice] = useState(0);
   const assistant = useRef();
   useEffect(() => {
-    //Инициализация ассистента
     assistant.current = initializeAssistant(() => getStateForAssistant());
     assistant.current.on("start", (event) => {
-      console.log(`assistant.on(start)`, event);
+      //console.log(`assistant.on(start)`, event);
     });
 
     assistant.current.on("data", (event /*: any*/) => {
-      console.log(`assistant.on(data)`, event);
+     //console.log(`assistant.on(data)`, event);
       const { action } = event;
 
       dispatchAssistantAction(action);
@@ -111,30 +119,42 @@ function App() {
   function getStateForAssistant() {
     return undefined;
   }
+  const  isListening = () => {
+    if (isPlaying) {
+      stop();
+    } else {
+      play();
+      setPlayButtonText("Остановить");
+    }
+  }
   const dispatchAssistantAction = async (action) => {
     console.log("dispatchAssistantAction", action);
     if (action) {
       switch (action.type) {
+        case "play_sound":
+          console.log('needs to play right now ');
+          play();
+          break;
         case "choose_level":
           switch (action.data) {
             case "фото":
-              setMode(0);
+              mode.current = 0;
               linkToGame();
               break;
             case "описанию":
-              setMode(1);
+              mode.current = 1;
               linkToGame();
               break;
             case "описание":
-              setMode(1);
+              mode.current = 1;
               linkToGame();
               break;
             case "звуку":
-              setMode(2);
+              mode.current = 2;
               linkToGame();
               break;
             case "звук":
-              setMode(2);
+              mode.current = 2;
               linkToGame();
               break;
             default:
@@ -192,7 +212,7 @@ function App() {
     <Switch>
       <Route path="/game" exact>
         <Game
-          mode={mode}
+          mode ={mode.current}
           playOrPractice={playOrPractice}
           sumTime={sumTime}
           setCounter={setCounter}
@@ -204,15 +224,18 @@ function App() {
           text={text}
           ans={ans}
           setAns={setAns}
-          sound={sound}
           counter={counter}
           assistant={assistant}
+          isListening={isListening}
+          isPlaying={isPlaying}
+          playButtonText={playButtonText}
+          setPlayButtonText={setPlayButtonText}
         />
       </Route>
       <Route path="/">
         <Home
           linkToGame={linkToGame}
-          setMode={setMode}
+          mode={mode}
           setPlayOrPractice={setPlayOrPractice}
           setCounter={setCounter}
           playOrPractice={playOrPractice}
