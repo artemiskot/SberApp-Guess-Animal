@@ -152,7 +152,7 @@ const Game = ({
             </Card>
           </div>
         );
-      case 2:
+      /*case 2:
         return (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Card
@@ -201,7 +201,7 @@ const Game = ({
               </CardBody>
             </Card>
           </div>
-        );
+        );*/
     }
   };
 

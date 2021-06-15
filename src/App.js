@@ -149,7 +149,7 @@ function App() {
               mode.current = 1;
               linkToGame();
               break;
-            case "звуку":
+            /*case "звуку":
               mode.current = 2;
               linkToGame();
               break;
@@ -158,7 +158,7 @@ function App() {
               linkToGame();
               break;
             default:
-              break;
+              break;*/
           }
           break;
 
@@ -193,7 +193,6 @@ function App() {
           setAns(action.data);
           break;
         case "send_answer":
-          console.log("в сенд ансвере", solvedQuestions.current);
           processCard();
           break;
         case "go_home":

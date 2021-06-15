@@ -160,35 +160,6 @@ const Home = ({
             </CardContent>
           </CardBody>
         </Card>
-        <Card style={{ width: "21rem", margin: "1rem" }}>
-          <CardBody>
-            <CardMedia src={hear} height={"12rem"} />
-            <CardContent>
-              <TextBox>
-                <TextBoxBigTitle>{"Угадай по звуку"}</TextBoxBigTitle>
-                <TextBoxSubTitle>
-                  {
-                    "Необходимо понять о каком животном идет речь по не всегда характерному звуку"
-                  }
-                </TextBoxSubTitle>
-              </TextBox>
-              <Button
-                text="Начать"
-                view="primary"
-                size="s"
-                scaleOnInteraction={true}
-                outlined={true}
-                stretch
-                style={{ marginTop: "1em" }}
-                tabIndex={-1}
-                onClick={() => {
-                  mode.current = 2;
-                  linkToGame();
-                }}
-              />
-            </CardContent>
-          </CardBody>
-        </Card>
       </div>
     </Container>
   );
