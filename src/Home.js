@@ -97,7 +97,7 @@ const Home = ({
         <Card
           style={{
             display: "flex",
-            width: "20rem",
+            width: "18.5rem",
             margin: "0.5rem",
             justifyContent: "center",
           }}
@@ -130,7 +130,7 @@ const Home = ({
             </CardContent>
           </CardBody>
         </Card>
-        <Card style={{ width: "20rem", margin: "1rem" }}>
+        <Card style={{ width: "18.5rem", margin: "0.5rem" }}>
           <CardBody>
             <CardMedia src={opisanie} height={"9rem"} />
             <CardContent>

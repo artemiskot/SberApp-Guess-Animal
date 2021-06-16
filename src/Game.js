@@ -69,7 +69,7 @@ const Game = ({
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Card
               style={{
-                width: isRowBased ? "30rem" : "20rem",
+                width: isRowBased ? "22rem" : "18rem",
                 marginTop: "1rem",
               }}
               tabIndex={-1}
