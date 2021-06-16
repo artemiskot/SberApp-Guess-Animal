@@ -47,8 +47,8 @@ const Home = ({
         style={{
           display: "flex",
           justifyContent: "space-around",
-          marginBottom: "1rem",
-          marginTop: "2rem",
+          marginBottom: "0.5rem",
+          marginTop: "1rem",
         }}
       >
         <Display3>Отгадай Животное</Display3>
@@ -57,7 +57,7 @@ const Home = ({
         style={{
           display: "flex",
           justifyContent: "center",
-          marginBottom: "1rem",
+          //marginBottom: "0.5rem",
         }}
       >
         <Tabs
@@ -97,13 +97,13 @@ const Home = ({
         <Card
           style={{
             display: "flex",
-            width: "25rem",
-            margin: "1rem",
+            width: "20rem",
+            margin: "0.5rem",
             justifyContent: "center",
           }}
         >
           <CardBody>
-            <CardMedia src={lion} height={"10rem"}/>
+            <CardMedia src={lion} height={"9rem"}/>
             <CardContent>
               <TextBox>
                 <TextBoxBigTitle>{"Угадай по фото"}</TextBoxBigTitle>
@@ -130,9 +130,9 @@ const Home = ({
             </CardContent>
           </CardBody>
         </Card>
-        <Card style={{ width: "25rem", margin: "1rem" }}>
+        <Card style={{ width: "20rem", margin: "1rem" }}>
           <CardBody>
-            <CardMedia src={opisanie} height={"10rem"} />
+            <CardMedia src={opisanie} height={"9rem"} />
             <CardContent>
               <TextBox>
                 <TextBoxBigTitle>{"Угадай по описанию"}</TextBoxBigTitle>
