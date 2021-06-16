@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/SberApp-Guess-Animal/static/css/main.44882b5a.chunk.css",
-    "main.js": "/SberApp-Guess-Animal/static/js/main.5aadc7a5.chunk.js",
-    "main.js.map": "/SberApp-Guess-Animal/static/js/main.5aadc7a5.chunk.js.map",
-    "runtime-main.js": "/SberApp-Guess-Animal/static/js/runtime-main.e5f7839e.js",
-    "runtime-main.js.map": "/SberApp-Guess-Animal/static/js/runtime-main.e5f7839e.js.map",
-    "static/js/2.268a5b2c.chunk.js": "/SberApp-Guess-Animal/static/js/2.268a5b2c.chunk.js",
-    "static/js/2.268a5b2c.chunk.js.map": "/SberApp-Guess-Animal/static/js/2.268a5b2c.chunk.js.map",
-    "static/js/3.35e0f749.chunk.js": "/SberApp-Guess-Animal/static/js/3.35e0f749.chunk.js",
-    "static/js/3.35e0f749.chunk.js.map": "/SberApp-Guess-Animal/static/js/3.35e0f749.chunk.js.map",
-    "static/js/4.53ce8501.chunk.js": "/SberApp-Guess-Animal/static/js/4.53ce8501.chunk.js",
-    "static/js/4.53ce8501.chunk.js.map": "/SberApp-Guess-Animal/static/js/4.53ce8501.chunk.js.map",
+    "main.js": "/SberApp-Guess-Animal/static/js/main.0fb6227e.chunk.js",
+    "main.js.map": "/SberApp-Guess-Animal/static/js/main.0fb6227e.chunk.js.map",
+    "runtime-main.js": "/SberApp-Guess-Animal/static/js/runtime-main.dbfc9888.js",
+    "runtime-main.js.map": "/SberApp-Guess-Animal/static/js/runtime-main.dbfc9888.js.map",
+    "static/js/2.b51a42a4.chunk.js": "/SberApp-Guess-Animal/static/js/2.b51a42a4.chunk.js",
+    "static/js/2.b51a42a4.chunk.js.map": "/SberApp-Guess-Animal/static/js/2.b51a42a4.chunk.js.map",
+    "static/js/3.fc09d1f2.chunk.js": "/SberApp-Guess-Animal/static/js/3.fc09d1f2.chunk.js",
+    "static/js/3.fc09d1f2.chunk.js.map": "/SberApp-Guess-Animal/static/js/3.fc09d1f2.chunk.js.map",
+    "static/js/4.82ace13b.chunk.js": "/SberApp-Guess-Animal/static/js/4.82ace13b.chunk.js",
+    "static/js/4.82ace13b.chunk.js.map": "/SberApp-Guess-Animal/static/js/4.82ace13b.chunk.js.map",
     "index.html": "/SberApp-Guess-Animal/index.html",
     "static/css/main.44882b5a.chunk.css.map": "/SberApp-Guess-Animal/static/css/main.44882b5a.chunk.css.map",
-    "static/js/2.268a5b2c.chunk.js.LICENSE.txt": "/SberApp-Guess-Animal/static/js/2.268a5b2c.chunk.js.LICENSE.txt",
-    "static/js/3.35e0f749.chunk.js.LICENSE.txt": "/SberApp-Guess-Animal/static/js/3.35e0f749.chunk.js.LICENSE.txt",
+    "static/js/2.b51a42a4.chunk.js.LICENSE.txt": "/SberApp-Guess-Animal/static/js/2.b51a42a4.chunk.js.LICENSE.txt",
+    "static/js/3.fc09d1f2.chunk.js.LICENSE.txt": "/SberApp-Guess-Animal/static/js/3.fc09d1f2.chunk.js.LICENSE.txt",
     "static/media/hear.32c7908f.jpg": "/SberApp-Guess-Animal/static/media/hear.32c7908f.jpg",
     "static/media/lionpic.e6022f19.jpg": "/SberApp-Guess-Animal/static/media/lionpic.e6022f19.jpg",
     "static/media/opisanie.5766be14.jpg": "/SberApp-Guess-Animal/static/media/opisanie.5766be14.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e5f7839e.js",
-    "static/js/2.268a5b2c.chunk.js",
+    "static/js/runtime-main.dbfc9888.js",
+    "static/js/2.b51a42a4.chunk.js",
     "static/css/main.44882b5a.chunk.css",
-    "static/js/main.5aadc7a5.chunk.js"
+    "static/js/main.0fb6227e.chunk.js"
   ]
 }
