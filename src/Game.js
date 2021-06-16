@@ -89,7 +89,7 @@ const Game = ({
                     //   helperText={"Helper text"}
                     disabled={false}
                     status={status !== "" ? status : undefined}
-                    onChange={(v) => setAns(v.target.value)}
+                    onChange={(v) => setAns(v.target.value.toLowerCase())}
                   />
                   <Button
                     style={{ marginTop: "1rem" }}
@@ -137,7 +137,7 @@ const Game = ({
                     //   helperText={"Helper text"}
                     disabled={false}
                     status={status !== "" ? status : undefined}
-                    onChange={(v) => setAns(v.target.value)}
+                    onChange={(v) => setAns(v.target.value.toLowerCase())}
                   />
                   <Button
                     style={{ marginTop: "1rem" }}
