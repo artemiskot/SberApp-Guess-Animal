@@ -66,6 +66,7 @@ const Home = ({
           scaleOnPress={true}
           outlined={!disabled && outlined}
           disabled={disabled}
+          focused={true}
         >
           {items.map((_, i) => (
             <TabItem
