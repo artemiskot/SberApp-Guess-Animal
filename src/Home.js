@@ -35,7 +35,7 @@ const Home = ({
   const icons = [<IconRefresh />, <IconTimerFill />];
   const outlined = false;
   const items = [0, 0];
-  const texts = ["Режим тренировки", "Игровой режим"];
+  const texts = ["Режим тренировки", "Режим игровой"];
   const disabled = false;
   const history = useHistory();
 
@@ -91,19 +91,19 @@ const Home = ({
           alignItems: "center",
           //flexGrow: "1",
           //flexShrink: "1",
-          //marginBottom: "10rem",
+          marginBottom: "10rem",
         }}
       >
         <Card
           style={{
             display: "flex",
-            width: "21rem",
+            width: "25rem",
             margin: "1rem",
             justifyContent: "center",
           }}
         >
           <CardBody>
-            <CardMedia src={lion} height={"12rem"} />
+            <CardMedia src={lion} height={"10rem"}/>
             <CardContent>
               <TextBox>
                 <TextBoxBigTitle>{"Угадай по фото"}</TextBoxBigTitle>
@@ -130,9 +130,9 @@ const Home = ({
             </CardContent>
           </CardBody>
         </Card>
-        <Card style={{ width: "21rem", margin: "1rem" }}>
+        <Card style={{ width: "25rem", margin: "1rem" }}>
           <CardBody>
-            <CardMedia src={opisanie} height={"12rem"} />
+            <CardMedia src={opisanie} height={"10rem"} />
             <CardContent>
               <TextBox>
                 <TextBoxBigTitle>{"Угадай по описанию"}</TextBoxBigTitle>

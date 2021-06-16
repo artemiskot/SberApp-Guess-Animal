@@ -77,7 +77,7 @@ const Game = ({
               scaleOnFocus={false}
             >
               <CardBody>
-                <CardMedia style={{ maxHeight: "22rem" }} src={picture} />
+                <CardMedia style={{ maxHeight: "18rem" }} src={picture} />
                 <CardContent cover={cover}>
                   <TextBox>
                     <TextBoxBigTitle>{"Какое это животное?"}</TextBoxBigTitle>

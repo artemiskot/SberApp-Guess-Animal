@@ -16,7 +16,7 @@ const initializeAssistant = (getState /*: any*/) => {
   if (process.env.NODE_ENV === "development") {
     return createSmartappDebugger({
       token:
-      process.env.REACT_APP_TOKEN ??
+      process.env.REACT_APP_TOKEN  ??
         "",
       initPhrase: `Запусти Отгадай животное`,
       getState,
