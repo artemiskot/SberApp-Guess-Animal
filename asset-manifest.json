@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SberApp-Guess-Animal/static/css/main.abcf933d.chunk.css",
-    "main.js": "/SberApp-Guess-Animal/static/js/main.3652aff3.chunk.js",
-    "main.js.map": "/SberApp-Guess-Animal/static/js/main.3652aff3.chunk.js.map",
+    "main.js": "/SberApp-Guess-Animal/static/js/main.bdb25468.chunk.js",
+    "main.js.map": "/SberApp-Guess-Animal/static/js/main.bdb25468.chunk.js.map",
     "runtime-main.js": "/SberApp-Guess-Animal/static/js/runtime-main.dbfc9888.js",
     "runtime-main.js.map": "/SberApp-Guess-Animal/static/js/runtime-main.dbfc9888.js.map",
     "static/js/2.611e53b2.chunk.js": "/SberApp-Guess-Animal/static/js/2.611e53b2.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.dbfc9888.js",
     "static/js/2.611e53b2.chunk.js",
     "static/css/main.abcf933d.chunk.css",
-    "static/js/main.3652aff3.chunk.js"
+    "static/js/main.bdb25468.chunk.js"
   ]
 }
