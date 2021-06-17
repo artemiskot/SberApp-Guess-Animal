@@ -8,7 +8,7 @@ import { useMediaQuery } from "./media";
 
 import { Container } from "@sberdevices/plasma-ui/components/Grid";
 import { Button, P } from "@sberdevices/plasma-ui";
-import { Display3 } from "@sberdevices/plasma-ui";
+import { Display3,Row,Col } from "@sberdevices/plasma-ui";
 import { useState } from "react";
 import {
   Card,
@@ -42,7 +42,7 @@ const Home = ({
   const isRowBased = useMediaQuery("(min-width: 1000px)");
 
   return (
-    <Container>
+    <div>
       <div
         style={{
           display: "flex",
@@ -54,33 +54,38 @@ const Home = ({
         <Display3>Отгадай Животное</Display3>
       </div>
       <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          //marginBottom: "0.5rem",
-        }}
+        focus={true}
+        outlined={true}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "0.5rem",
+              }}
       >
-        <Tabs
-          size={isRowBased ? "l" : "s"}
-          view={"secondary"}
-          scaleOnPress={true}
-          outlined={!disabled && outlined}
-          disabled={disabled}
-          focused={true}
-        >
-          {items.map((_, i) => (
-            <TabItem
-              key={`item:${i}`}
-              isActive={i === playOrPractice}
-              tabIndex={!disabled ? i : -1}
-              contentLeft={icons[i]}
-              onClick={() => !disabled && setPlayOrPractice(i)}
-            >
-              {texts[i]}
-            </TabItem>
-          ))}
-        </Tabs>
-      </div>
+          <Tabs
+            size={isRowBased ? "l" : "s"}
+            view={"secondary"}
+            scaleOnPress={true}   
+            outlined={true}
+            //outlined={!disabled && outlined}
+            disabled={disabled}
+            focus-visible={true}
+
+            //focused={true}
+          >
+            {items.map((_, i) => (
+              <TabItem
+                key={`item:${i}`}
+                isActive={i === playOrPractice}
+                tabIndex={!disabled ? i : -1}
+                contentLeft={icons[i]}
+                onClick={() => !disabled && setPlayOrPractice(i)}
+              >
+                {texts[i]}
+              </TabItem>
+            ))}
+          </Tabs>
+        </div>
 
       <div
         style={{
@@ -162,7 +167,7 @@ const Home = ({
           </CardBody>
         </Card>
       </div>
-    </Container>
+    </div>
   );
 };
 
