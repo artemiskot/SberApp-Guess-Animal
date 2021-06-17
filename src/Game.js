@@ -77,7 +77,7 @@ const Game = ({
               scaleOnFocus={false}
             >
               <CardBody>
-                <CardMedia ratio="4/3" src={picture} />
+                <CardMedia ratio="1/1" src={picture} />
                 <CardContent cover={cover}>
                   <TextBox>
                     <TextBoxBigTitle>{"Какое это животное?"}</TextBoxBigTitle>
